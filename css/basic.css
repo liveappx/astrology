@@ -1,0 +1,307 @@
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+ul.list-style,
+ol.list-style {
+  padding: 0;
+}
+
+ul.list-style li::marker,
+ol.list-style li::marker {
+  color: $accent-1;
+}
+
+.unstyled {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.container {
+  @include widther(1440px) {
+    padding: 0 96px;
+    max-width: 100%;
+  }
+}
+
+section:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+
+
+.form-group {
+  position: relative;
+}
+
+.input-group {
+  position: relative;
+  background: transparent;
+  box-shadow: none;
+  padding: 16px 32px;
+  border-radius: 10px;
+  border: 2px solid $gray-3;
+  border-radius: 30px;
+}
+
+.form-control {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  position: relative;
+  margin-bottom: 0;
+  color: $white;
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+    background: transparent;
+    color: $white;
+
+  }
+
+  &::placeholder {
+    color: $gray-3;
+    opacity: 1;
+  }
+}
+
+.form-group {
+  .form-control {
+    background: transparent;
+    padding: 12px 16px;
+    border: 1px solid #FAFAFA;
+    filter: 42px 42px 24px rgba(0, 0, 0, 0.01), 24px 24px 20px rgba(0, 0, 0, 0.03), 11px 11px 15px rgba(0, 0, 0, 0.04), 3px 3px 8px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+  }
+}
+
+
+
+textarea {
+  height: 208px;
+  &.st-2{
+    height: 310px;
+  }
+  &.st-3{
+    height: 222px;
+  }
+}
+
+.input-group {
+  button {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    font-weight: 700;
+    font-size: 32px;
+    color: $gray-3;
+  }
+}
+
+
+label {
+  &.error {
+    color: #bc0f0f;
+    margin-top: 10px;
+  }
+}
+
+.alert-message {
+  display: none;
+}
+
+
+.pagination-cus {
+  display: inline-flex;
+
+  li {
+    margin-right: 10px;
+
+    i {
+      font-size: 60px;
+      color: $black-1;
+    }
+
+    a {
+      display: block;
+    }
+
+    .link {
+      background: linear-gradient(282.51deg,
+          rgba(148, 158, 155, 0.2) -4.31%,
+          rgba(148, 158, 155, 0) 126.79%);
+      backdrop-filter: blur(2.5px);
+      border-radius: 10px;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: $font-27;
+      color: $black-1;
+
+      &.active {
+        color: $accent-1;
+      }
+
+      &:hover {
+        color: $accent-1;
+      }
+    }
+  }
+}
+
+.dark {
+  .pagination-cus {
+    li {
+      i {
+        color: $gray-1;
+      }
+
+      .link {
+        color: $gray-1;
+
+        &.active {
+          color: $accent-1;
+        }
+
+        &:hover {
+          color: $accent-1;
+        }
+      }
+    }
+  }
+}
+
+.points {
+  li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      left: 0;
+      top: 10px;
+      background: $accent-1;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+/*-------------------------
+    Typography
+-------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  color: $gray-2;
+  background: $white;
+  font-weight: 400;
+  background-color: $white;
+  height: 100%;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  &.dark {
+    background: $black-1;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+address,
+p,
+pre,
+blockquote,
+table,
+hr {
+  margin: 0 0 20px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  a {
+    color: inherit;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 750;
+  color: $black-1;
+}
+
+p {
+  font-size: $font-16;
+  font-weight: 400;
+  margin: 0 0 16px 0;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: unset;
+
+  &:hover {
+    color: $accent-1;
+  }
+}
+
+span {
+  display: inline-block;
+  font-size: $font-12;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+}
+
+b,
+strong {
+  font-family: $font-primary;
+}
+
+
+.social-icon {
+  @include media-query(380px) {
+    justify-content: center !important;
+  }
+}
